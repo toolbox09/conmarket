@@ -1,0 +1,29 @@
+{
+  "name": "@repo/ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:^",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@mantine/colors-generator": "^7.11.2",
+    "@mantine/core": "^7.11.2",
+    "@mantine/form": "^7.12.2",
+    "@mantine/hooks": "^7.11.2",
+    "@mantine/notifications": "^7.11.2",
+    "@tabler/icons-react": "^3.11.0",
+    "react": "^18.3.1",
+    "react-virtualized-auto-sizer": "^1.0.24"
+  }
+}

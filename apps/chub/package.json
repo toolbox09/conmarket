@@ -13,8 +13,11 @@
     "@repo/es": "workspace:^",
     "@repo/kakao-map": "workspace:^",
     "@repo/react": "workspace:^",
+    "@repo/topology": "workspace:^",
+    "@repo/ui": "workspace:^",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
