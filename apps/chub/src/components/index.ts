@@ -1,1 +1,1 @@
-export * from './theme/MantineThemeProvider';
+export * from './internal';

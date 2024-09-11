@@ -1,0 +1,14 @@
+
+
+.link {
+    cursor: pointer;
+    &:hover {
+        font-weight: 600;
+        color: var(--mantine-color-chubColors-filled);
+    }
+
+    &[data-select="true"] {
+        font-weight: 600;
+        color: var(--mantine-color-chubColors-filled);
+    }
+}
