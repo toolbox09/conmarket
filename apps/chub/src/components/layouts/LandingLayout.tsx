@@ -9,7 +9,6 @@ function LandingHeader() {
     const navigate = useNavigate();
     const currentPath = usePath(0);
 
-
     function Link( { label, path } : { label : string, path : string } ) {
         return (
             <UnstyledButton 

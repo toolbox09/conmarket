@@ -1,9 +1,11 @@
-
+import { LandingLayout } from '@/components';
 
 
 function Map() {
   return (
-    <>Map</>
+    <LandingLayout w='100vw' h='100vh' >
+      Map
+    </LandingLayout>
   )
 }
 
