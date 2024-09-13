@@ -1,11 +1,13 @@
-import { AuthLayout } from '@/components';
+// import { AuthLayout } from '@/components';
+import { Flex } from '@repo/ui';
+import { RegisterPanel } from './parts/RegisterPanel';
 
 
 function Signup() {
   return (
-    <AuthLayout w='100vw' h='100vh' >
-      Signup
-    </AuthLayout>
+    <Flex w='100vw' h='100vh' >
+      <RegisterPanel/>
+    </Flex>
   )
 }
 
