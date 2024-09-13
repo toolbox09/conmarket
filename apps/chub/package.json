@@ -15,9 +15,11 @@
     "@repo/react": "workspace:^",
     "@repo/topology": "workspace:^",
     "@repo/ui": "workspace:^",
+    "immer": "^10.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.25.1",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

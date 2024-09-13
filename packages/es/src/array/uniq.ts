@@ -8,6 +8,6 @@
  * const result = uniq(array);
  * 결과값 : result = [1, 2, 3, 4, 5]
  */
-export function uniq<T>( array : readonly T[] ) : T[] {
+export function uniq<T>( array : readonly T[] ) {
     return Array.from( new Set(array));
 }

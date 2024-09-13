@@ -23,7 +23,7 @@ function LandingHeader() {
     }
 
     return (
-        <Flex direction={'row'} justify={'space-between'} align={'center'} w={'100%'} h={'80px'} style={{ borderBottom : 'grey 1px solid' }}  px='16px' py='22px'  >
+        <Flex direction={'row'} justify={'space-between'} align={'center'} w={'100%'} h={'80px'} className='bdb' px='16px' py='22px'  >
             <Flex gap={'80px'} >
                 <LogoTitle/>
                 <Flex gap={'40px'}>
@@ -33,8 +33,8 @@ function LandingHeader() {
             </Flex>
 
             <Flex gap={'24px'} align={'center'} >
-                <Button onClick={()=>navigate('./signup')} >건축사 등록</Button>
-                <Button  onClick={()=>navigate('./console')} variant='outline' >기업 서비스</Button>
+                <Button className='shadow-md' onClick={()=>navigate('/signup')} >건축사 등록</Button>
+                <Button className='shadow-md' onClick={()=>navigate('/console')} variant='outline' >기업 서비스</Button>
             </Flex>
         </Flex>
     );

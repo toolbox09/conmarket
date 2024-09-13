@@ -4,7 +4,7 @@ import './MantineThemeProvider.scss';
 
 
 const chubColors = {
-  chubColors : [
+  chub : [
     '#e1f9fc',
     '#b8f0f8',
     '#8fe8f5',
@@ -23,8 +23,8 @@ export function MantineThemeProvider( { children } : PropsWithChildren ) {
     <MantineProvider
       theme={{
         colors: chubColors as any, 
-        primaryColor: 'chubColors', 
-        // autoContrast : true,
+        primaryColor: 'chub', 
+        autoContrast : true,
         fontFamily : `"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;`,
       }}
     >

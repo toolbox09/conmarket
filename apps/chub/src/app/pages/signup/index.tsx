@@ -1,9 +1,11 @@
-
+import { AuthLayout } from '@/components';
 
 
 function Signup() {
   return (
-    <>Signup</>
+    <AuthLayout w='100vw' h='100vh' >
+      Signup
+    </AuthLayout>
   )
 }
 

@@ -3,10 +3,10 @@
 .link {
     cursor: pointer;
     &:hover {
-        color: var(--mantine-color-chubColors-filled);
+        color: var(--mantine-color-chub-filled);
     }
 
     &[data-selected="true"] {
-        color: var(--mantine-color-chubColors-filled);
+        color: var(--mantine-color-chub-filled);
     }
 }
