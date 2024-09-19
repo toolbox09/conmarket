@@ -1,5 +1,5 @@
 import { Flex, FlexProps } from '@repo/ui';
-import { LogoTitle } from '@/components';
+import { LogoTitle } from './LogoTitle';
 
 interface FormPageProps extends FlexProps {
 }

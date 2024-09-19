@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Register from './pages/register';
 import MemberId from './pages/memberId';
-import MemberSocial from './pages/MemberSocial';
+import MemberSocial from './pages/memberSocial';
 import Company  from './pages/company';
 
 

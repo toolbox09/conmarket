@@ -1,19 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import Register from './pages/register';
-import MemberId from './pages/memberId';
-import MemberSocial from './pages/MemberSocial';
-import Company  from './pages/company';
+import IdInquiry from './pages/idInquiry';
+import PwInquiry from './pages/pwInquiry';
 
-
-function Signup() {
+function Help() {
   return (
     <Routes>
-      <Route path='/' element={<Register/>} />
-      <Route path='/memberId' element={<MemberId/>} />
-      <Route path='/memberSocial' element={<MemberSocial/>} />
-      <Route path='/company' element={<Company/>} />
+      <Route path='/idInquiry' element={<IdInquiry/>} />
+      <Route path='/pwInquiry' element={<PwInquiry/>} />
     </Routes>
   )
 }
 
-export default Signup;
+export default Help;

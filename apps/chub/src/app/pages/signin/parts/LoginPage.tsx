@@ -1,9 +1,11 @@
 import { Flex, TextInput, PasswordInput, Checkbox, Button, Divider, UnstyledButton, CloseButton, Center } from '@repo/ui';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { NaverLogin, KakaoLogin } from '@/components';
 
 export function LoginPage() {
     const [ id, setId ] = useState<string>('');
+    const navigate = useNavigate();
       
     return (
     <Flex w='100%' h='100%' component={Center}  >
@@ -34,11 +36,11 @@ export function LoginPage() {
             <Flex w={'100%'} direction={'column'} gap={'8px'}>
               <Button size={'md'} color={'dark.0'}>로그인</Button>
               <Flex direction={'row'} gap={'lg'}>
-                <UnstyledButton style={{ fontSize : '14px' }}>회원가입</UnstyledButton>
+                <UnstyledButton style={{ fontSize : '14px' }} onClick={()=>navigate('/signup')}  >회원가입</UnstyledButton>
                 <Divider size={'sm'} orientation={'vertical'} />
-                <UnstyledButton style={{ fontSize : '14px' }}>아이디 찾기</UnstyledButton>
+                <UnstyledButton style={{ fontSize : '14px' }} onClick={()=>navigate('/help/idInquiry')}>아이디 찾기</UnstyledButton>
                 <Divider size={'sm'} orientation={'vertical'} />
-                <UnstyledButton style={{ fontSize : '14px' }}>비밀번호 찾기</UnstyledButton>
+                <UnstyledButton style={{ fontSize : '14px' }} onClick={()=>navigate('/help/pwInquiry')}>비밀번호 찾기</UnstyledButton>
               </Flex>
             </Flex>
             <Divider w={'100%'} label='소셜 계정으로 로그인하기' ></Divider>

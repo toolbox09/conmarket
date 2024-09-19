@@ -8,6 +8,7 @@ import Signup from './pages/signup';
 import Console from './pages/console';
 import Error from './pages/error';
 import Callback from './pages/callback';
+import Help from './pages/help';
 
 export function App() {
 
@@ -22,6 +23,7 @@ export function App() {
           <Route path="/signup/*" element={<Signup />}/>
           <Route path="/console" element={<Console />}/>
           <Route path="/callback/*" element={<Callback />}/>
+          <Route path="/help/*" element={<Help />}/>
           <Route path="*" element={<Error />}/>
         </Routes>
       </BrowserRouter>

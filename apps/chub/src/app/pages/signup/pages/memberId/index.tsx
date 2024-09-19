@@ -1,7 +1,8 @@
 import { TextInput, Button, CloseButton, PasswordInput, Flex } from '@repo/ui';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { TermsCard, PairBox, FormBox, FormPage } from '../../components';
+import { TermsCard, PairBox } from '../../components';
+import { FormBox, FormPage } from '@/components';
 
 
 function MemberId() {
@@ -32,7 +33,7 @@ function MemberId() {
               <Button variant='outline' size={'md'}>인증요청</Button>
             </PairBox>
             <TermsCard w={'100%'}/>
-            <Button onClick={()=>navigate('/company')} w={'100%'} size={'md'}>계속하기</Button>
+            <Button onClick={()=>navigate('../company')} w={'100%'} size={'md'}>계속하기</Button>
           </FormBox>
       </FormPage>
   )
