@@ -7,6 +7,7 @@ import Signin from './pages/signin';
 import Signup from './pages/signup';
 import Console from './pages/console';
 import Error from './pages/error';
+import Callback from './pages/callback';
 
 export function App() {
 
@@ -20,6 +21,7 @@ export function App() {
           <Route path="/signin" element={<Signin />}/>
           <Route path="/signup/*" element={<Signup />}/>
           <Route path="/console" element={<Console />}/>
+          <Route path="/callback/*" element={<Callback />}/>
           <Route path="*" element={<Error />}/>
         </Routes>
       </BrowserRouter>

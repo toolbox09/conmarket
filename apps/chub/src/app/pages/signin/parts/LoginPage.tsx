@@ -1,6 +1,6 @@
 import { Flex, TextInput, PasswordInput, Checkbox, Button, Divider, UnstyledButton, CloseButton, Center } from '@repo/ui';
-import { Icon360View, IconCircleLetterC } from '@repo/ui';
 import { useState } from 'react';
+import { NaverLogin, KakaoLogin } from '@/components';
 
 export function LoginPage() {
     const [ id, setId ] = useState<string>('');
@@ -42,15 +42,8 @@ export function LoginPage() {
               </Flex>
             </Flex>
             <Divider w={'100%'} label='소셜 계정으로 로그인하기' ></Divider>
-            <Button leftSection={<Icon360View size={24} />} w={'100%'} size={'md'} color='#2DB400' >네이버 계정으로 계속하기</Button>
-            <Button leftSection={<IconCircleLetterC size={24} />} w={'100%'} size={'md'} color='#FEE500' >카카오 계정으로 계속하기</Button>
-            <Flex>
-              
-            </Flex>
-            
-      
-      
-             
+            <NaverLogin w={'100%'} size={'md'} label='네이버 계정으로 계속하기' />
+            <KakaoLogin w={'100%'} size={'md'} label='카카오 계정으로 계속하기' />
           </Flex>
     </Flex>
     )
