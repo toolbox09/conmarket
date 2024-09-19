@@ -16,6 +16,7 @@
     "@repo/topology": "workspace:^",
     "@repo/ui": "workspace:^",
     "axios": "^1.7.2",
+    "dayjs": "^1.11.13",
     "immer": "^10.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
