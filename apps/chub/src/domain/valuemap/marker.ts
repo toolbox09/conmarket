@@ -1,18 +1,21 @@
-import { useMapPositionChanged } from '../internal';
-import { ReactNode } from 'react';
 
 
+export type MarkerTypeCode = 'TRADE' | 'ITEM';
+interface MarkerType {
+  code : MarkerTypeCode;
+  label : string;
+}
 
-interface Marker {
+export type PropertyTypeCode = 'LAND' | 'HOUSING' | 'BUILDING' | 'FACTORY' | 'STORE' | 'APT';
+interface PropertyType {
+  code : PropertyTypeCode;
+  label : string;
+}
+
+export interface Marker {
   targetId : string;
-  type : {
-    code : string;
-    label : string;
-  },
-  propertyType : {
-    code : string;
-    label : string;
-  },
+  type : MarkerType;
+  propertyType : PropertyType;
   propertyTitle : string;
   pnu : string;
   dealMethodType : string;
@@ -40,16 +43,3 @@ interface Marker {
   showBrokerageTooltip : boolean;
 }
 
-
-interface ValueupMapMarkerProps {
-  url : string;
-  marker : ( marker : Marker) => ReactNode;
-}
-
-export function ValueupMapMarker( { url } : ValueupMapMarkerProps ) {
-  useMapPositionChanged( ( position )=>{
-    
-  })
-
-  return null;
-}

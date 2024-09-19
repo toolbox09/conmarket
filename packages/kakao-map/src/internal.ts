@@ -1,5 +1,6 @@
 export * from './components/Map';
 export * from './components/MapControl';
+export * from './components/CustomOverlay';
 
 export * from './hooks/useMap';
 export * from './hooks/useMapPositionChanged';

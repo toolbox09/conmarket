@@ -18,7 +18,7 @@ export function App() {
           <Route path="/map" element={<Map />}/>
           <Route path="/search" element={<Search />}/>
           <Route path="/signin" element={<Signin />}/>
-          <Route path="/signup" element={<Signup />}/>
+          <Route path="/signup/*" element={<Signup />}/>
           <Route path="/console" element={<Console />}/>
           <Route path="*" element={<Error />}/>
         </Routes>

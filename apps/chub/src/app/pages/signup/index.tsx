@@ -1,13 +1,18 @@
-// import { AuthLayout } from '@/components';
-import { Flex } from '@repo/ui';
-import { RegisterPanel } from './parts/RegisterPanel';
+import { Routes, Route } from 'react-router-dom';
+import Register from './pages/register';
+import MemberId from './pages/memberId';
+import MemberSocal from './pages/memberSocal';
+import Company  from './pages/company';
 
 
 function Signup() {
   return (
-    <Flex w='100vw' h='100vh' >
-      <RegisterPanel/>
-    </Flex>
+    <Routes>
+      <Route path='/' element={<Register/>} />
+      <Route path='/memberId' element={<MemberId/>} />
+      <Route path='/memberSocal' element={<MemberSocal/>} />
+      <Route path='/company' element={<Company/>} />
+    </Routes>
   )
 }
 
