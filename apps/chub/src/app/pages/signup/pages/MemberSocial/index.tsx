@@ -1,7 +1,7 @@
 import { Flex } from '@repo/ui';
 
 
-function MemberSocal() {
+function MemberSocial() {
   return (
     <Flex w='100vw' h='100vh' >
       MemberSocal
@@ -9,4 +9,4 @@ function MemberSocal() {
   )
 }
 
-export default MemberSocal;
+export default MemberSocial;
