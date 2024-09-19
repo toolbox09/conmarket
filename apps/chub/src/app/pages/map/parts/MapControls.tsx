@@ -7,7 +7,7 @@ export function MapControls() {
   return (
   <>
     <MapControl position='topleft' >
-      <Flex gap='lg' >
+      <Flex gap='lg' p='xs' align={'start'} >
         <CombinContorl/>
         <MarkerControl/>
       </Flex>
