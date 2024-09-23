@@ -25,7 +25,7 @@ function LandingHeader() {
     return (
         <Flex direction={'row'} justify={'space-between'} align={'center'} w={'100%'} h={'80px'} className='bdb' px='16px' py='22px'  >
             <Flex gap={'80px'} >
-                <LogoTitle/>
+                <LogoTitle size='20px' />
                 <Flex gap={'40px'}>
                     <Link label='지도' path='map' />
                     <Link label='건축사 찾기' path='search'  />

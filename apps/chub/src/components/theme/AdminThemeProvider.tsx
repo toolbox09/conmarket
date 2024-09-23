@@ -5,41 +5,34 @@ import './MantineThemeProvider.scss';
 import 'dayjs/locale/ko';
 
 
-
-
-const chubColors = {
-  chub : [
-    '#e1f9fc',
-    '#b8f0f8',
-    '#8fe8f5',
-    '#66dff1',
-    '#3dd7ee',
-    '#34CFE3',
-    '#2ebacc',
-    '#28a5b6',
-    '#228f9f',
-    '#1b7a89',
-  ],
-  // chub : [
-  //   '#999',
-  //   '#888',
-  //   '#777',
-  //   '#666',
-  //   '#555',
-  //   '#444',
-  //   '#333',
-  //   '#222',
-  //   '#111',
-  //   '#000',
-  // ]
+const adminChubColors = {
+  adminChub : [
+    '#999',
+    '#888',
+    '#777',
+    '#666',
+    '#555',
+    '#444',
+    '#333',
+    '#222',
+    '#111',
+    '#000',
+  ]
 };
 
-export function MantineThemeProvider( { children } : PropsWithChildren ) {
+export function AdminThemeProvider( { children } : PropsWithChildren ) {
   return (
     <MantineProvider
       theme={{
-        colors: chubColors as any, 
-        primaryColor: 'chub', 
+        radius : {
+          xs: '0px',
+          sm: '0px',
+          md: '0px',
+          lg: '0px',
+          xl: '0px',
+        },
+        colors: adminChubColors as any, 
+        primaryColor: 'adminChub', 
         autoContrast : true,
         fontFamily : `"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;`,
         components : {
@@ -58,7 +51,7 @@ export function MantineThemeProvider( { children } : PropsWithChildren ) {
               size : 'md',
             }
           }),
-        }
+        },
       }}
     >
       <DatesProvider settings={{ locale : 'ko' }} >
@@ -67,4 +60,3 @@ export function MantineThemeProvider( { children } : PropsWithChildren ) {
     </MantineProvider>
   )
 }
-

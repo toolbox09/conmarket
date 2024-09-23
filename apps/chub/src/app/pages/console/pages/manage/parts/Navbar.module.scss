@@ -1,0 +1,13 @@
+
+
+
+.avatarButton {
+  cursor: pointer;
+  &:hover {
+    background-color: var(--mantine-color-shadcn-light-hover);
+  }
+}
+
+.navLink {
+  border-radius: var(--mantine-radius-md);
+}

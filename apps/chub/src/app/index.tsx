@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MantineThemeProvider } from '@/components';
+import { MantineThemeProvider, ShadCNThemeProvider } from '@/components';
 import Landing from './pages/landing';
 import Map from './pages/map';
 import Search from './pages/search';
@@ -13,7 +13,7 @@ import Help from './pages/help';
 export function App() {
 
   return (
-    <MantineThemeProvider>
+    <ShadCNThemeProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />}/>
@@ -21,12 +21,12 @@ export function App() {
           <Route path="/search" element={<Search />}/>
           <Route path="/signin" element={<Signin />}/>
           <Route path="/signup/*" element={<Signup />}/>
-          <Route path="/console" element={<Console />}/>
+          <Route path="/console/*" element={<Console />}/>
           <Route path="/callback/*" element={<Callback />}/>
           <Route path="/help/*" element={<Help />}/>
           <Route path="*" element={<Error />}/>
         </Routes>
       </BrowserRouter>
-    </MantineThemeProvider>
+    </ShadCNThemeProvider>
   )
 }

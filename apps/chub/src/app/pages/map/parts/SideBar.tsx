@@ -1,44 +1,7 @@
-import { PropsWithChildren, useEffect, useState, useRef } from 'react';
 import { Panel } from '@repo/ui';
 
 
-
-// function useAnchor( { sectionIds, options } : { sectionIds : string[], options : IntersectionObserverInit } ) {
-//   const [ sectionId, set ]
-//   useEffect(()=>{
-//   },[])
-// }
-
-function useRatios( rootId : string, sectionIds : string[]  ) {
-
-  const [visibleRatios, setVisibleRatios] = useState<number[]>([]);
-
-  useEffect(()=>{
-    const root = document.getElementById(rootId);
-    const docs = sectionIds.map( id => document.getElementById(id));
-
-    const handleScroll = () => {
-      const newRatios = docs.map( doc => {
-        console.log(doc);
-        return 10;
-      }) 
-      setVisibleRatios(newRatios);
-    };
-
-    console.log(root);
-    root?.addEventListener('scroll', handleScroll)
-
-    return ()=>{
-      root?.removeEventListener('scroll', handleScroll);
-    }
-  },[])
-}
-
-
-
 function FilterPanel() { 
-
-  useRatios('root-id',['section1','section2','section3' ] );
 
   return (
     <Panel h={500} w={400}>

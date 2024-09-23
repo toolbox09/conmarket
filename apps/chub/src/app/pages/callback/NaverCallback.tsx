@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
-import { NaverLoginState } from '@/components';
+import { NaverLoginState } from '@repo/react';
 
 
 export function NaverCallback() {
@@ -20,7 +20,5 @@ export function NaverCallback() {
 
     },[])
 
-    return (
-        <>NaverCallback</>
-    )
+    return null;
 }

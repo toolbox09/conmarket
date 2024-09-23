@@ -38,3 +38,4 @@ export * from './math/weightedAverage';
 export * from './string/camelCase';
 export * from './string/capitalize';
 export * from './string/uniqName';
+export * from './string/phoneNumber';
