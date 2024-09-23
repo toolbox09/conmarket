@@ -1,10 +1,13 @@
 import { Flex } from '@repo/ui';
+import { CompanyPanel } from './parts/CompanyPanel';
 
 function Company() {
   return (
-    <Flex  direction={'column'} >
-      Company
+
+    <Flex flex={1} >
+      <CompanyPanel/>
     </Flex>
+    
   )
 }
 
