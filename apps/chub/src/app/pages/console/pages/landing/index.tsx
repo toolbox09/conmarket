@@ -8,7 +8,7 @@ import landingImg from '@/assets/console-landing1.png';
 function Landing() {
   const navigate = useNavigate();
 
-  return <Flex w='100vw' h='100vh'  direction={'column'} >
+  return <Flex w='100vw' h='100vh'  direction={'column'}   >
     <Flex className='bdb' align={'center'}  direction={'column'} >
       <Flex w='1024' p='md' justify={'space-between'} >
         <Flex gap='xs' align={'center'} >

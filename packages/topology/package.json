@@ -11,6 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "@repo/tsconfig": "workspace:^",
+    "@types/geojson": "^7946.0.14",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@repo/es": "workspace:^"
   }
 }

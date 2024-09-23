@@ -1,11 +1,19 @@
+import { Coordinate } from '../internal';
 
 
-/**
- * 경위도
- */
-export interface LatLng {
-  /** 위도 ,y축(latitude) */
-  lat : number;
-  /** 경도 ,x축(longitude)*/
-  lng : number;
+export class LatLng {
+
+    /** 위도,y축(latitude) */
+    public lat : number;
+    /** 경도,x축(longitude)*/
+    public lng : number;
+
+    public constructor( lat : number, lng : number ) {
+        this.lat = lat;
+        this.lng = lng;
+    }
+
+    public toCoordinate() {
+        return new Coordinate(this.lng, this.lat);
+    }
 }
