@@ -17,7 +17,7 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "@mantine/colors-generator": "^7.11.2",
+    "@mantine/colors-generator": "^7.12.2",
     "@mantine/core": "^7.11.2",
     "@mantine/dates": "^7.12.2",
     "@mantine/dropzone": "^7.12.2",

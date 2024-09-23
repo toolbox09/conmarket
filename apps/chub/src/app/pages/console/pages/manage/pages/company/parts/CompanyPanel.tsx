@@ -5,6 +5,8 @@ import { ReactNode } from 'react';
 
 
 
+
+
 interface FormInputProps {
   label : ReactNode;
   value : ReactNode;
@@ -13,18 +15,19 @@ interface FormInputProps {
 
 function FormInput( { label, value, end } : FormInputProps ) {
 
-  // const labelRender = () => {
-  //   if( typeof label === 'string' ) {
-  //     return label;
-  //   }else{
-  //     return label;
-  //   }
-  // }
+
+  function render( node : ReactNode ) {
+    if( typeof node === 'string' ) {
+      return <Text>{node}</Text>
+    }else{
+      return node;
+    }
+  }
 
   return (
   <Flex direction={'row'} className='bdb' >
-    <Flex align={'center'} w={'340px'} px={'24px'} py={'16px'} style={{ backgroundColor : '#E9ECEF', borderRight : end ? '' : 'solid 1px #DEE2E6' }} >{label}</Flex>
-    <Flex align={'center'} w={'934px'} px={'24px'} py={'16px'} style={{ backgroundColor : 'white' }} >{value}</Flex>
+    <Flex align={'center'} w={'340px'} px={'24px'} py={'16px'} style={{ backgroundColor : '#E9ECEF', borderRight : end ? '' : 'solid 1px #DEE2E6' }} >{render(label)}</Flex>
+    <Flex align={'center'} w={'934px'} px={'24px'} py={'16px'} style={{ backgroundColor : 'white' }} >{render(value)}</Flex>
   </Flex>
   )
 }
@@ -34,7 +37,7 @@ export function CompanyPanel() {
   return (
     <Flex direction={'column'} w={'100%'} style={{ backgroundColor : '#F8F9FA' }}>
       <Flex direction={'column'} gap={'24px'} mt={'24px'} ml={'48px'} >
-        <Title>프로필 수정</Title>
+        <Title order={3} >프로필 수정</Title>
         <Flex w={'1424px'} p={'40px'} direction={'column'} style={{ background : 'white' }}>
           <Flex direction={'column'} style={{ borderTop : 'solid 2px black', borderBottom : 'solid 2px black' }}>
            
@@ -42,7 +45,7 @@ export function CompanyPanel() {
 
             <FormInput label={'비밀번호'} value={
               <Flex direction={'row'} gap={'16px'} align={'center'}>
-                <TextInput placeholder='＊＊＊＊＊＊＊＊＊' disabled></TextInput>
+                <TextInput w={270} placeholder='＊＊＊＊＊＊＊＊＊' disabled></TextInput>
                 <Button variant="outline">비밀번호 변경</Button>
               </Flex>} 
             />
@@ -50,11 +53,12 @@ export function CompanyPanel() {
             <FormInput  end={true} label={'전화번호'} value={
               <Flex  direction={'row'} gap={'16px'} align={'center'}>
                 <Select
+                  w='80px'
                   placeholder="010"
                   data={['010', '011', '017', '016', '018', '019']}
                 />
-                <TextInput placeholder='2102'></TextInput>
-                <TextInput placeholder='5873'></TextInput>
+                <TextInput w='80px' placeholder='2102'></TextInput>
+                <TextInput w='80px' placeholder='5873'></TextInput>
                 <Button variant="outline">인증하기</Button>
               </Flex>} 
             />
@@ -62,7 +66,7 @@ export function CompanyPanel() {
             <FormInput  end={true} label={'프로필 사진'} value={
               <Flex  direction={'row'} gap={'16px'} align={'center'}>
                 <Button w={'100px'} h={'100px'} style={{ backgroundColor : '#A6A7AB' }} >IMAGE</Button>
-                  <Flex direction={'column'}>
+                  <Flex direction={'column'} align={'start'} >
                     <Button variant="outline">파일 선택</Button>
                     <Text>JPG,GIF, PNG</Text>
                     <Text>권장 사이즈 128px, 최대 250KB</Text>
@@ -74,8 +78,8 @@ export function CompanyPanel() {
           </Flex>
 
           <Flex justify={'center'} mt={'24px'} gap={'24px'} direction={'row'}>
-              <Button color='#373A40' >수정하기</Button>
-              <Button color='#909296'>취소</Button>
+              <Button size='sm' variant='filled' >수정하기</Button>
+              <Button size='sm' variant='filled' color='gray.5' >취소</Button>
             </Flex>
         </Flex>  
       

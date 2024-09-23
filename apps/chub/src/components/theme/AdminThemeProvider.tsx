@@ -1,12 +1,16 @@
 import { PropsWithChildren } from 'react';
-import { MantineProvider, DatesProvider, Button, TextInput, PasswordInput } from '@repo/ui';
+import { MantineProvider, DatesProvider, Button, TextInput, PasswordInput,Text, generateColors } from '@repo/ui';
 
 import './MantineThemeProvider.scss';
 import 'dayjs/locale/ko';
 
 
+// const theme = generateColors('#000');
 const adminChubColors = {
+  // adminChub : theme,
   adminChub : [
+    '#bbb',
+    '#aaa',
     '#999',
     '#888',
     '#777',
@@ -15,10 +19,11 @@ const adminChubColors = {
     '#444',
     '#333',
     '#222',
-    '#111',
-    '#000',
   ]
 };
+
+
+
 
 export function AdminThemeProvider( { children } : PropsWithChildren ) {
   return (
@@ -38,19 +43,24 @@ export function AdminThemeProvider( { children } : PropsWithChildren ) {
         components : {
           TextInput : TextInput.extend({
             defaultProps : {
-              size : 'md',
+              size : 'xs',
             }
           }),
           PasswordInput : PasswordInput.extend({
             defaultProps : {
-              size : 'md',
+              size : 'xs',
             }
           }),
           Button : Button.extend({
             defaultProps : {
-              size : 'md',
+              size : 'xs',
             }
           }),
+          Text : Text.extend({
+            defaultProps : {
+              size : 'sm',
+            }
+          })
         },
       }}
     >

@@ -26,14 +26,15 @@ export function Navbar() {
 
       </Flex>
 
-      <Flex direction={'column'} px={'24'} py={'24px'} gap={'24px'}>
+      <Flex direction={'column'} gap={'24px'} pt='lg' >
         
-        <Flex direction={'row'} align={'center'} gap={'24px'}>
+
+        <Flex direction={'row'} align={'center'} gap={'24px'} p='md'>
           <IconBuilding style={{ color : 'white' }} />
           <Text style={{ color : 'white' }}>기업정보 관리</Text>
         </Flex>
 
-        <Flex direction={'row'} align={'center'} gap={'24px'}>
+        <Flex direction={'row'} align={'center'} gap={'24px'} p='md'>
           <IconBuilding style={{ color : 'white' }} />
           <Text style={{ color : 'white' }}>프로젝트 관리</Text>
         </Flex>
