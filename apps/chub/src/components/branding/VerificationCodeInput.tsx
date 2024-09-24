@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { phoneNumber as toPhoneNumber } from '@repo/es';
 import { Flex, FlexProps, TextInput, Button, useInputState } from '@repo/ui';
 
@@ -12,7 +12,7 @@ export function VerificationCodeInput( { onSuccess, ...props } : VerificationCod
   const buttonWidth = 140;
   const [ isRequest, setIsRequest ] = useState<boolean>(false);
   const [ phoneNumber, setPhoneNumber ] = useInputState<string>('');
-  const [ validateNumber, setValidateNumber ] = useInputState<string>('');
+  //const [ validateNumber, setValidateNumber ] = useInputState<string>('');
 
 
   const phoneNumbervalidate = useMemo(()=>{

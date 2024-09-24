@@ -1,9 +1,5 @@
-import { Flex, Button, TextInput, Title, Select, Text, Tabs, rem, Box } from '@repo/ui';
-import { FormPage, FormBox } from '@/components';
+import { Flex, Button, TextInput, Title, Select, Text, Tabs } from '@repo/ui';
 import { ReactNode } from 'react';
-
-
-
 
 
 
@@ -34,7 +30,6 @@ function FormInput( { label, value, end, w } : FormInputProps ) {
 
 
 export function CompanyPanel() {
-    const w = 300;
     
   return (
     
