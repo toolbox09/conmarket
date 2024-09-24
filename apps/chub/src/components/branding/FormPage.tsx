@@ -10,7 +10,7 @@ interface FormPageProps extends FlexProps {
 // 'var(--mantine-color-gray-0)'
 export function FormPage( { children, ...props } : FormPageProps ) {
   return (
-    <Flex {...props} direction={'column'} w='100vw' h='100vh' style={{ overflowX : 'hidden', backgroundColor : '#fff' }} align={'center'}  >
+    <Flex {...props} direction={'column'} w='100vw' h='100vh' style={{ overflowX : 'hidden', backgroundColor : 'rgb(250,250,250)' }} align={'center'}  >
       <LogoTitle mt={'80px'}/>
       {children}
     </Flex>

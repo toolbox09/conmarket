@@ -1,6 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useScrollIntoView } from '@repo/react';
-import { Flex, IconAdjustmentsHorizontal, Panel, ScrollArea, Box, ActionIcon, Center, Menu } from '@repo/ui';
+import { useEffect, useState } from 'react';
+import { Flex, IconAdjustmentsHorizontal, Panel, ActionIcon, Center, Menu } from '@repo/ui';
 // import { isExist } from '@repo/es';
 import { useMarkerStore, MarkerType } from '../_stores';
 import { SwitchButton } from '../_components';

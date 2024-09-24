@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MantineThemeProvider, ShadCNThemeProvider } from '@/components';
+import { ShadCNThemeProvider } from '@/components';
 import Landing from './pages/landing';
 import Map from './pages/map';
 import Search from './pages/search';

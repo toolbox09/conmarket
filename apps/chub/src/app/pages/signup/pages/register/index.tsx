@@ -1,6 +1,7 @@
 import { Flex, Button, Anchor, Text, Title, IconMessageCircleFilled } from '@repo/ui';
 import { IconMail } from '@repo/ui';
 import { FormPage, FormBox } from '@/components';
+import { getMeKakao, getMeNaver, existsSocial } from '@/repositories';
 import { useNavigateQuery, useKakaoLogin, useNaverLogin } from '@repo/react';
 
 
@@ -9,7 +10,20 @@ function Register() {
     const kakao = useKakaoLogin({
       url : import.meta.env.VITE_KAKAO_JDK_KEY,
       onSuccess : ( value ) => {
-        navigate('./memberSocial', { signupType : 'kakao' } );
+        getMeKakao(value)
+        .then(( res )=>{
+          if(res) {
+            existsSocial('kakao', res.id)
+            .then( exists =>{
+              if(exists) {
+                navigate('./memberSocial', { signupType : 'kakao' } );
+              }else{
+                alert('이미 가입된 계정입니다.');
+              }
+            })
+          }
+          console.log(res);
+        })
       }
     });
 
@@ -18,6 +32,10 @@ function Register() {
       callbackUrl : 'https://localhost:5175/callback/naver',
       onSuccess : ( value ) => {
         navigate('./memberSocial',{ signupType : 'naver' } );
+        getMeNaver(value)
+        .then(( res )=>{
+          console.log(res);
+        })
       }
     })
     return (

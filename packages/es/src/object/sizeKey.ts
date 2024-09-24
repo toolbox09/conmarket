@@ -1,6 +1,3 @@
-import { Predicate } from './_internal';
-import { keyOf } from './keyOf';
-
 /**
  * 
  * @param obj 

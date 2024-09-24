@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { MantineProvider, DatesProvider, Button, TextInput, PasswordInput,Text, generateColors } from '@repo/ui';
+import { MantineProvider, DatesProvider, Button, TextInput, PasswordInput,Text } from '@repo/ui';
 
 import './MantineThemeProvider.scss';
 import 'dayjs/locale/ko';

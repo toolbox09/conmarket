@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 import { useMapPositionChanged, CustomOverlay } from '@repo/kakao-map';
 import { Marker } from './marker';
-import { getMarker, GetMarkerOption } from './api';
+import { GetMarkerOption } from './api';
 
 interface ValueupMapMarkerProps {
   url : string;
@@ -12,10 +12,10 @@ interface ValueupMapMarkerProps {
 
 export function ValueupMapMarker( { url, marker } : ValueupMapMarkerProps ) {
 
-  const [ markers, setMarkers ] = useState<Marker[]>([]);
+  const [ markers ] = useState<Marker[]>([]);
 
   useMapPositionChanged( ( position )=>{
-    
+    console.log(url, position);
   })
 
   return (
