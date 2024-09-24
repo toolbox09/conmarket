@@ -1,4 +1,4 @@
-import { Flex, Button, TextInput, Title, Select, Text, Tabs, rem, Box } from '@repo/ui';
+import { Flex, Button, TextInput, Title, Select, Text, Box } from '@repo/ui';
 import { FormPage, FormBox } from '@/components';
 import { ReactNode } from 'react';
 
@@ -33,65 +33,50 @@ function FormInput( { label, value, end, w } : FormInputProps ) {
 }
 
 
-export function CompanyPanel() {
+export function ProfilePanel() {
     const w = 300;
-    
   return (
-    
     <Flex direction={'column'} w={'100%'} style={{ backgroundColor : '#F8F9FA' }}>
-      <Flex direction={'column'} gap={'24px'} p='xl'>
-        <Title order={3} >기업정보 관리</Title>
-        
-        <Tabs defaultValue="gallery">
-          <Tabs.List>
-            <Tabs.Tab value="gallery">
-              기업 기본정보
-            </Tabs.Tab>
-            <Tabs.Tab value="messages">
-              기업 추가정보
-            </Tabs.Tab>
-          </Tabs.List>
-        </Tabs>
-
+      <Flex direction={'column'} gap={'24px'} p='xl'  >
+        <Title order={3} >프로필 수정</Title>
         <Flex p={'40px'} direction={'column'} style={{ background : 'white' }}>
           <Flex direction={'column'} style={{ borderTop : 'solid 2px black', borderBottom : 'solid 2px black' }}>
 
-            <FormInput label={'회사명'} value={'수성엔지니어링'} />
-            <FormInput label={'대표자명'} value={'홍길동'} />
-            
-            
-            <FormInput end={true} label={'주소검색'} value={
-              <Flex direction={'column'} gap={'8px'}>
-                
-                <Flex  direction={'row'} gap={'16px'} align={'center'}>
-                  <TextInput w='60px' placeholder='05836' disabled></TextInput>
-                  <Button variant="outline">주소검색</Button>
-                </Flex>
-                
-                <Flex  direction={'row'} gap={'16px'} align={'center'}>
-                  <TextInput w='350px' placeholder='서울 송파구 정의로8길 13 (문정동, 수성위너스)' disabled></TextInput>
-                  <TextInput w='350px' placeholder='4층'></TextInput>
-                </Flex>
-
-              </Flex>}
+            <FormInput label={'이메일'} value={'sseng12@gmail.com'} />
+            <FormInput label={'비밀번호'} value={
+              <Flex direction={'row'} gap={'16px'} align={'center'}>
+                <TextInput w={270} placeholder='＊＊＊＊＊＊＊＊＊' disabled></TextInput>
+                <Button variant="outline">비밀번호 변경</Button>
+              </Flex>} 
             />
 
             <FormInput end={true} label={'전화번호'} value={
               <Flex  direction={'row'} gap={'16px'} align={'center'}>
                 <Select
                   w='80px'
-                  placeholder="02"
-                  data={['02', '031', '032', '033', '041', '042', '043', '044', '051','052','053','054','055', '061','062', '063', '064', '070']}
+                  placeholder="010"
+                  data={['010', '011', '017', '016', '018', '019']}
                 />
                 <Text>-</Text>
                 <TextInput w='80px' placeholder='2102'></TextInput>
                 <Text>-</Text>
                 <TextInput w='80px' placeholder='5873'></TextInput>
-                {/* <Button variant="outline">인증하기</Button> */}
+                <Button variant="outline">인증하기</Button>
               </Flex>} 
             />
 
-            
+            <FormInput  end={true} label={'프로필 사진'} value={
+              <Flex  direction={'row'} gap={'16px'} align={'center'}>
+                <Button w={'100px'} h={'100px'} style={{ backgroundColor : '#A6A7AB' }} >IMAGE</Button>
+                  <Flex direction={'column'} align={'start'} gap={'16px'}>
+                    <Button variant="outline">파일 선택</Button>
+                    <Flex direction={'column'}>  
+                      <Text>JPG,GIF, PNG</Text>
+                      <Text>권장 사이즈 128px, 최대 250KB</Text>
+                    </Flex>
+                  </Flex>  
+              </Flex>} 
+            />
 
                        
           </Flex>
@@ -111,4 +96,4 @@ export function CompanyPanel() {
   )
 }
 
-export default CompanyPanel;
+export default ProfilePanel;
